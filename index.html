@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meal Prepping Picker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Meal Prepping Picker 🍳🥗🍲</h1>
+    <p>Pick your meals for Breakfast, Lunch, and Dinner!</p>
+  </header>
+
+  <main>
+    <form id="mealForm">
+      <section class="meal-section">
+        <h2>Breakfast</h2>
+        <select id="breakfast" required>
+          <option value="">-- Select Breakfast --</option>
+          <option value="Oatmeal">Oatmeal</option>
+          <option value="Smoothie">Smoothie</option>
+          <option value="Eggs & Toast">Eggs & Toast</option>
+          <option value="Pancakes">Pancakes</option>
+        </select>
+        <span class="error" id="breakfastError"></span>
+      </section>
+
+      <section class="meal-section">
+        <h2>Lunch</h2>
+        <select id="lunch" required>
+          <option value="">-- Select Lunch --</option>
+          <option value="Grilled Chicken Salad">Grilled Chicken Salad</option>
+          <option value="Veggie Wrap">Veggie Wrap</option>
+          <option value="Sushi">Sushi</option>
+          <option value="Pasta">Pasta</option>
+        </select>
+        <span class="error" id="lunchError"></span>
+      </section>
+
+      <section class="meal-section">
+        <h2>Dinner</h2>
+        <select id="dinner" required>
+          <option value="">-- Select Dinner --</option>
+          <option value="Steak & Veggies">Steak & Veggies</option>
+          <option value="Salmon & Rice">Salmon & Rice</option>
+          <option value="Vegetable Stir Fry">Vegetable Stir Fry</option>
+          <option value="Tacos">Tacos</option>
+        </select>
+        <span class="error" id="dinnerError"></span>
+      </section>
+
+      <button id="submitBtn" type="submit">Save Meal Plan</button>
+    </form>
+
+    <section id="result" hidden>
+      <h2>Your Meal Plan</h2>
+      <ul>
+        <li><strong>Breakfast:</strong> <span id="resultBreakfast"></span></li>
+        <li><strong>Lunch:</strong> <span id="resultLunch"></span></li>
+        <li><strong>Dinner:</strong> <span id="resultDinner"></span></li>
+      </ul>
+      <button id="editBtn">Edit Plan</button>
+    </section>
+
+    <section id="gallery">
+      <h2>Meal Gallery 🍽️</h2>
+      <div class="gallery-container">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Oatmeal" class="gallery-img" data-caption="Oatmeal" />
+        <img src="https://images.unsplash.com/photo-1510626176961-4b69f9e54f7f?auto=format&fit=crop&w=400&q=80" alt="Grilled Chicken
